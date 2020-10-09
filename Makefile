@@ -15,7 +15,7 @@ M := make -C ${KDIR} M=`pwd`
 obj-m := $(MODULE).o 
 
 all:
-	make -C /lib/modules/$(shell uname -r)/build SUBDIRS=$(shell pwd) modules
+	make -C $(KDIR) M=$(shell pwd) modules
 
 modules_install:
 	${M} modules_install
