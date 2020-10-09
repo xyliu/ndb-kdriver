@@ -17,6 +17,7 @@
 #include <linux/module.h>
 #include <linux/miscdevice.h>
 #include <linux/mm.h>
+#include <asm-generic/io.h>
 
 #define NDM_BUF_SIZE (1024*1024)
 char     g_file_path[256] = { 0 };
